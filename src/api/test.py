@@ -16,10 +16,11 @@ currency_pair = 'BAT_USDT'
 #api_response = spot_api.get_fee(currency_pair=currency_pair)
 #print(api_response)
 
+def res():
+    settle = 'usdt' 
 
-settle = 'usdt' 
+    contract = 'BAT_USDT'
 
-contract = 'BAT_USDT'
-
-api_response = api.get_my_trades(settle, contract=contract)
-print(api_response)
+    api_response = api.get_my_trades(settle, contract=contract)
+#print(api_response)
+    return api_response 

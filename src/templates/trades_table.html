@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Trades Table</title>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px; /* adjust the value as needed */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+
+</style>
+
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Contract</th>
+          <th>Create Time</th>
+          <th>Fee</th>
+          <th>ID</th>
+          <th>Order ID</th>
+          <th>Point Fee</th>
+          <th>Price</th>
+          <th>Role</th>
+          <th>Size</th>
+          <th>Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for trade in trades %}
+        <tr>
+          <td>{{ trade['contract'] }}</td>
+          <td>{{ trade['create_time'] }}</td>
+          <td>{{ trade['fee'] }}</td>
+          <td>{{ trade['id'] }}</td>
+          <td>{{ trade['order_id'] }}</td>
+          <td>{{ trade['point_fee'] }}</td>
+          <td>{{ trade['price'] }}</td>
+          <td>{{ trade['role'] }}</td>
+          <td>{{ trade['size'] }}</td>
+          <td>{{ trade['text'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+
